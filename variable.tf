@@ -1,26 +1,29 @@
-variable"resource_group_name"{
-    type = string
-    description ="RG name in azure"
+variable "resource_group_name" {
+  type        = string
+  description = "Name of the Resource Group"
+}
 
+variable "location" {
+  type        = string
+  description = "Azure region for all resources"
 }
-variable"location"{
-    type = string
-    description = "resources location in azure"
-}
-variable"cluster_name"{
-    type = string
-    description = " AKS name in azure"
 
+variable "acr_name" {
+  type        = string
+  description = "Name of the Azure Container Registry"
 }
-variable"kubernetes_version"{
-    type = string
-    description = " Kubernetes version"
+
+variable "cluster_name" {
+  type        = string
+  description = "Name of the AKS cluster"
 }
-variable"system_node_count"{
-    type = number
-    description = "Number of AKS worker nodes"
+
+variable "kubernetes_version" {
+  type        = string
+  description = "Version of Kubernetes to deploy"
 }
-variable"acr_name"{
-    type = string
-    description = " ACR name"
+
+variable "system_node_count" {
+  type        = number
+  description = "Number of worker nodes in the AKS cluster"
 }
